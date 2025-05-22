@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body { /* <-- ADICIONE 'html' AQUI E DEFENDA A ALTURA */
+    height: 100%; /* Faz com que o html e o body ocupem 100% da altura da viewport */
+    margin: 0;   /* Garante que não haja margem padrão que possa causar scrollbar */
+    padding: 0;
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(80deg, rgba(2, 0, 36,1) 0%, rgba(9, 9, 121, 1) 35%, rgb(17, 17, 163) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+app-root {
+    display: block; /* app-root é um elemento personalizado, certifique-se que ele é um bloco */
+    min-height: 100%; /* Garante que ele ocupe pelo menos 100% da altura do pai */
+}
