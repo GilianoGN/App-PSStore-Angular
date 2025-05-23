@@ -1,11 +1,29 @@
+.menu-sony {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding-right: 25px;
+    align-items: center;
+    justify-content: end;
+    font-size: 10px;
+    height: 30px;
+    color: white;
+    background-color: black;
+}
+
 .menu-container{
+    top: 30px;
     display: flex;
     flex-direction: row;
     position: fixed;
     z-index: 999;
     background-color: #ffffff;
     width: 100%;
-    height: 40px;
+    height: 50px;
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5);
 }
 
@@ -13,34 +31,101 @@
     margin-left: 30px;
     display: flex;
     align-items: center;
-
 }
 
-.menu-item{
+.menu-item {
     display: flex;
     margin: auto;
     align-items: center;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-grow: 1;
 }
 
-.menu-item > ul {
+@media (max-width: 768px) {
+    .menu-item {
+        margin: 10px 0;
+        justify-content: center;
+        padding: 0 10px;
+    }
+    
+    .menu > ul > li > ul {
+        position: static;
+        width: 100%;
+        transform: none;
+        text-align: center;
+        box-shadow: none;
+    }
+}
+
+.menu > ul {
     display: flex;
     list-style-type: none;
 }
 
-.menu-item > ul > li {
+.menu > ul > li {
+    position: relative;
     padding: 5px;
     margin-right: 75px;
 }
 
-.menu-item > ul > li > a {
+.menu > ul > li > a {
     text-decoration: none;
     padding: 5px;
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    float: left;
+    line-height: 30px;
     cursor: pointer;
 }
 
-.menu-item > ul > li > a:hover {
+.menu > ul > li > a:hover {
     color: blue;
     font-weight: bold;
+}
+
+.menu > ul > li.active {
+    background-color: #f0f0f0; 
+    color: #000;
+}
+
+.menu > ul > li > ul {
+    display:block;
+    position: absolute; 
+    top: 100%; 
+    list-style: none; 
+    padding: 0;
+    margin: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu > ul > li > ul > li {
+    float: none; /* Cada item do submenu fica em sua própria linha */
+    text-align:center; /* Alinha o texto à esquerda */
+    width: 100%; /* Ocupa a largura total do submenu */
+    height: auto; /* Altura ajusta-se ao conteúdo */
+    line-height: normal; /* Reseta line-height para itens individuais */
+    border-radius: 10px;
+    margin: 5px 0;
+    padding:  0;
+
+    background-color:rgb(102, 170, 241); 
+    min-width: 130px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3); 
+}
+
+.menu > ul > li > ul > li > a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8px 15px; /* Espaçamento interno para os links do submenu */
+    display: block; /* Faz o link ocupar toda a área clicável do li */
+    color: black;
+    text-decoration: none;
+}
+
+.menu > ul > li > ul > li > a:hover {
+    background-color:#f0f0f0;
+    border-radius: 10px;
 }

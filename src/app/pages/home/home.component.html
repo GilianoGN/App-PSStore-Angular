@@ -1,7 +1,18 @@
 <div class="menu">
-    <app-menubar></app-menubar>
+    <app-menubar
+        (categorySelected)="filterByCategory($event)"
+        (consoleSelected)="filterByConsole($event)"
+    ></app-menubar>
 </div>
     <hr>
 <div class="home_container">
-    <app-cards></app-cards>
+    <app-cards 
+        *ngFor="let game of games"
+        cardImg="{{game.photo}}"
+        cardName="{{game.name}}"
+        cardGUrl="{{game.gurl}}"
+        cardLabel="{{game.label}}"
+        cardType="{{game.console.join(' ')}}"
+        cardPrice="{{game.price}}"
+    ></app-cards>
 </div>

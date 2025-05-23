@@ -1,3 +1,6 @@
+<div class="menu-sony">
+    <h1>SONY</h1>
+</div>
 <div class="menu-container">
     <div class="menu-logo">
         <img 
@@ -9,19 +12,33 @@
         >
     </div>
     <div class="menu-item">
-        <ul>
-            <li><a
-
-            >HOME</a></li>
-            <li><a
-
-            >YOUTUBE</a></li>
-            <li><a
-
-            >LINKDIN</a></li>
-            <li><a
-
-            >GITHUB</a></li>
-        </ul>
+        <nav class="menu">
+            <ul>
+                <li><a href="/" (click)="closeAllSubmenus()">HOME</a></li>
+                <li (click)="toggleSubmenu('console')" [class.active]="activeSubmenu === 'console'"><a>CONSOLE</a>
+                    <ul *ngIf="activeSubmenu === 'console' || isHoveringConsole" (mouseenter)="isHoveringConsole = true" (mouseleave)="isHoveringConsole = false">
+                        <li><a href="#" (click)="closeAllSubmenus(); selectConsole('Todos')">TODOS</a></li>
+                        <li><a href="#" (click)="closeAllSubmenus(); selectConsole('PS4')">PS4</a></li>
+                        <li><a href="#" (click)="closeAllSubmenus(); selectConsole('PS5')">PS5</a></li>
+                    </ul>
+                </li>
+                <li (click)="toggleSubmenu('categoria')" [class.active]="activeSubmenu === 'categoria'"><a>CATEGORIA</a>
+                    <ul *ngIf="activeSubmenu === 'categoria' || isHoveringCategoria" (mouseenter)="isHoveringCategoria = true" (mouseleave)="isHoveringCategoria = false">
+                        <li><a href="#" (click)="closeAllSubmenus(); selectCategory('Todos')">TODOS</a></li>
+                        <li><a href="#" (click)="closeAllSubmenus(); selectCategory('Ação')">AÇÃO</a></li>
+                        <li><a href="#" (click)="closeAllSubmenus(); selectCategory('Aventura')">AVENTURA</a></li>
+                        <li><a href="#" (click)="closeAllSubmenus(); selectCategory('Horror')">HORROR</a></li>
+                        <li><a href="#" (click)="closeAllSubmenus(); selectCategory('Rpg')">RPG</a></li>
+                        <li><a href="#" (click)="closeAllSubmenus(); selectCategory('Esporte')">ESPORTE</a></li>
+                        <li><a href="#" (click)="closeAllSubmenus(); selectCategory('Simulador')">SIMULADOR</a></li>
+                        <li><a href="#" (click)="closeAllSubmenus(); selectCategory('Tiro')">TIRO</a></li>
+                        <li><a href="#" (click)="closeAllSubmenus(); selectCategory('Corrida')">CORRIDA</a></li>
+                        <li><a href="#" (click)="closeAllSubmenus(); selectCategory('Luta')">LUTA</a></li>
+                    </ul>               
+                </li>
+                <li><a href="https://www.linkedin.com/in/giliano-gn-530071203" target="_blank" (click)="closeAllSubmenus()">LINKEDIN</a></li>
+                <li><a href="https://github.com/GilianoGN/App-PSStore-Angular" target="_blank" (click)="closeAllSubmenus()">GITHUB</a></li>
+            </ul>
+        </nav>
     </div>
 </div>

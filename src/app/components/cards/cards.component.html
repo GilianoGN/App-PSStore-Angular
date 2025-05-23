@@ -1,1 +1,13 @@
-<p>cards works!</p>
+<a href="games/{{cardGUrl}}" class="card_container">
+    <img 
+        class="card_img"
+        src="{{cardImg}}" 
+        alt=""
+        srcset=""
+    >
+    <app-card-label gameLabel="{{cardLabel}}"></app-card-label>
+    <app-card-pricing 
+        gameType="{{cardType}}"
+        gamePrice="{{cardPrice}}"
+    ></app-card-pricing>
+</a>
