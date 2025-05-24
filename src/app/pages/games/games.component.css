@@ -1,13 +1,35 @@
-.games_container {
-    width: 90%;
-    margin: auto;
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    flex-wrap: wrap;
+.menu {
+    height: 80px;/**/
+/*    display:block;/**/
 }
 
-.menu {
-    height: 50px;
+.games_container {
+    /* Propriedade de Dimensionamento  */
+    width: 100%;/* px, %, vw, fit*/
+    height: 91vh;/* px, %, vh, fit*/
+/*    min-width: 100%;/* px, %, vw, fit*/
+/*    max-width: 100%;/* px, %, vw, fit*/
+/*    max-height: 100%;/* px, %, vh, fit*/
+/*    min-height: 100%;/* px, %, vh, fit*/
+    box-sizing: border-box;/* content, border */
+
+    /* Propriedade de Posicionamento  */
+    position: relative;/* static, relative, absolute, fixed */
+/*    top: 80px;/* px, %, rem, fit*/
+    left: 0px;/* px, %, rem, fit*/
+/*    bottom: 0;/* px, %, rem, fit*/
+/*    right: 0;/* px, %, rem, fit*/
+
+    /* Configurações do Component  */
+/*    padding: 0;/* top,left,bottom,right, color */
+/*    border: 3px solid red;/* top,left,bottom,right, width, style, radius, color */
+/*    margin: auto;/* top,left,bottom,right, color */
+    display: flex;/*block, inline, none, flex, grid*/
+    flex-direction: row;/* row, column, inherit, initial */
+    justify-content: center;/*start, end, center, between, around, evenly */
+/*    align-items: baseline;/**/
+    background-color: black; /* Fundo preto, como na imagem */
+/*    flex-wrap: wrap;/**/
+    overflow: hidden;/**/
+    object-fit:scale-down;/*fill, contain, cover, none, scale-down*/
 }

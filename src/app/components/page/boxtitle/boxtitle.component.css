@@ -1,0 +1,99 @@
+.box_container {
+    /* DIMENSÕES E ESPAÇAMENTO */
+    width: 500px; /* Largura aproximada da imagem. Ajuste conforme necessário. */
+    padding: 30px; /* Espaçamento interno */
+    box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+
+    /* ESTILO VISUAL */
+    background-color: rgb(26, 28, 56); /* Fundo preto semi-transparente */
+    color: white; /* Cor do texto padrão */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte similar à da imagem */
+    border-radius: 8px; /* Cantos levemente arredondados */
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra sutil no texto para melhor legibilidade */
+}
+
+/* Título principal do jogo */
+.box_name {
+    font-size: 2.5em; /* Tamanho da fonte grande */
+    font-weight: bold;
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    line-height: 1.2;
+}
+
+/* Subtítulo/Produtora */
+.box_type {
+    font-size: 1.1em;
+    color: #bbb; /* Cor levemente mais clara */
+    margin-bottom: 20px; /* Espaço abaixo da label */
+    font-weight: normal;
+}
+
+/* Container dos consoles/edições */
+.box_consoles {
+    display: flex; /* Para que os itens fiquem lado a lado */
+    gap: 10px; /* Espaço entre os 'p' */
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que os items quebrem linha se não houver espaço */
+}
+
+.box_consoles p {
+    background-color: #333; /* Fundo escuro para os "botões" */
+    color: #eee; /* Texto dos "botões" */
+    padding: 5px 10px;
+    border-radius: 4px; /* Cantos arredondados */
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    margin: 0; /* Remover margem padrão do parágrafo */
+}
+
+/* Container da nota e classificações */
+.box_nota {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre a nota e as classificações */
+    margin-bottom: 20px;
+}
+
+.box_nota h3 {
+    margin: 0;
+    font-size: 1.2em; /* Tamanho da fonte para a nota */
+    font-weight: bold;
+}
+
+/* Estrelas (você precisaria de um elemento HTML para as estrelas,
+   ou pode usar um ícone de fonte/imagem. Isso é apenas um placeholder) */
+.box_nota h3:first-child::after {
+    content: ' ★★★★★'; /* Exemplo de estrelas com um caractere unicode */
+    color: #ffc107; /* Cor amarela das estrelas */
+    font-size: 0.9em;
+    vertical-align: middle;
+}
+
+/* Preço */
+.box_price {
+    font-size: 2em; /* Tamanho da fonte do preço */
+    font-weight: bold;
+    margin-bottom: 30px; /* Espaço abaixo do preço */
+}
+
+/* Botão "Adicionar ao carrinho" */
+.box_carrinho {
+    background-color: #e65100; /* Laranja da imagem */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 25px; /* Cantos bem arredondados */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave no hover */
+    width: 100%; /* Ocupa a largura total do container */
+    max-width: 300px; /* Limita a largura máxima do botão */
+    display: block; /* Garante que o max-width funcione */
+    margin: 0 auto; /* Centraliza o botão */
+}
+
+.box_carrinho:hover {
+    background-color: #ff6f00; /* Laranja mais claro no hover */
+}

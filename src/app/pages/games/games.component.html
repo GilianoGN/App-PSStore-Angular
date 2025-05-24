@@ -3,5 +3,13 @@
 </div>
     <hr>
 <div class="games_container">
-    <h1>PAGINA DO JOGO</h1>
+    <app-page
+    *ngFor="let game of games"
+    pagName="{{game.name}}"
+    pagImg="{{game.photo}}"
+    pagLabel="{{game.label}}"
+    [pagType]='game.categoria'
+    [pagConsole]='game.console'
+    pagPrice="{{game.price}}"
+    ></app-page>
 </div>

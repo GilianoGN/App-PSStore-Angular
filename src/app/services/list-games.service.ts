@@ -32,13 +32,12 @@ export class ListGamesService {
   }
 
   filterGamePage(nomeUrl: string):GameData[] {
-    let filterGamePage = this.games;
+    let filteredGames = this.games;
     if (nomeUrl) {
-      filterGamePage = filterGamePage.filter(game => {
-        const matches = game.console.some(nam => nam.toLowerCase() === nomeUrl.toLowerCase());
-        return matches;
-      })
+      filteredGames = filteredGames.filter(game => {
+        return game.gurl.toLowerCase() === nomeUrl.toLowerCase();
+      });
     }
-    return filterGamePage;
+    return filteredGames;
   }
 }

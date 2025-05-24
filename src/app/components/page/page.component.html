@@ -1,0 +1,18 @@
+<div class="page_container">
+    <div class="pagebox_img_wrapper">
+        <h1 class="page_label">{{pagLabel}}</h1>
+        <img 
+            class="page_img"
+            src="{{pagImg}}"
+            alt=""
+            srcset=""
+        >
+    </div>
+    <app-boxtitle
+        boxName="{{pagName}}" 
+        [boxConsole]="pagConsole"
+        boxPrice="{{pagPrice}}"
+        boxLabel="{{pagLabel}}"
+        [boxType]="pagType"
+    ></app-boxtitle>
+</div>

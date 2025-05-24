@@ -1,0 +1,41 @@
+.page_container {
+    left: 0px;
+    overflow: hidden;/* Esconde qualquer conteúdo que possa transbordar */
+    display: flex;/* Usado para alinhar itens, mas o posicionamento absoluto do box_container irá ignorá-lo em parte */
+    flex-direction: row;
+/*    height: 100%;
+/*    position: relative; /* ESSENCIAL: Permite que elementos filhos com `position: absolute` se posicionem em relação a ele. */
+/*    height: 91vh; /* Ocupa a altura total da viewport */
+/*    align-items: center; /* Alinha o conteúdo verticalmente no centro */
+/*    justify-content: flex-start; /* Alinha o conteúdo horizontalmente à esquerda */
+/*    border: 3px solid red;/* top,left,bottom,right, width, style, radius, color */
+}
+.page_label {
+    width: fit-content;
+    height: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: absolute;
+    right: 0;
+    top:80%;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.70);
+    color:white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.pagebox_img_wrapper {
+    position: relative;
+}
+
+.page_img {
+    height:850px;
+/*    border: 3px solid blue;/* top,left,bottom,right, width, style, radius, color */
+}
+
+app-boxtitle {
+/*    border: 3px solid green;/* top,left,bottom,right, width, style, radius, color */
+    margin: auto;
+    margin-left: 15px;
+}

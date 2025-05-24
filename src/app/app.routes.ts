@@ -4,8 +4,6 @@ import { GamesComponent } from './pages/games/games.component';
 
 export const routes: Routes = [
     {path:'', component: HomeComponent, pathMatch: 'full'},
-    {path:'games', component: GamesComponent, children:[
-        {path: ':nameGame', component: GamesComponent},
-    ]},
+    {path: 'games/:nameGame', component: GamesComponent},
     {path:'**', redirectTo: ''}
 ];
